@@ -1,0 +1,32 @@
+<input type="text" [(ngModel)]="user">
+<button (click)="addToList()">Add</button>
+
+<hr />
+Use of ngFor with ngIf
+
+<!-- <ul>
+    <li  *ngFor="let user of listOfUser" [ngStyle]="{'color' : user.id>5?'green':'red'}">
+       {{user.username}} has id {{user.id}} is 
+       <span *ngIf="user.id>5">Online</span><span *ngIf="user.id<=5">offline</span>
+    </li>
+</ul> -->
+
+<table>
+    <thead>
+        <tr>
+            <td>ID</td>
+            <td>UserName</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of listOfUser" >
+            <td>
+                {{user.id}}
+            </td>
+            <td>
+                {{user.username}}
+            </td>
+        </tr>
+    </tbody>
+</table>
+
